@@ -1,0 +1,54 @@
+/* Åbn fil superliga-2015-2016.txt
+ * 12 hold
+ * 6 kampe i hver runde
+ * 33 runder
+ * Hver kamp indlæses i en struct: runde(x), ugedag, dato, klokkeslaet, hjemmehold - udehold, hjemmemål - udemål, tilskuertal
+ * Desuden behov for struct, der samler data om de enkelte hold
+
+ * De enkelte funktioner skal kunne aktiveres af brugeren fra main funktionen.
+          *Denne anbefales så simpel som mulig ? if/else statement efter talinput evt. ?
+ *
+ * Opg 1: en funktion der returnerer de uafgjorte kampe, hvor der er scoret >= 4 mål
+ *
+ * Opg 2: Funktion, der finder en evt. runde, hvor der er scoret mindre end 10 mål.            * Hvis runden findes så returner rundenummer og antal mål
+ *  OBS: Via parametre, - Lav et array før, der sendes med og fyldes og så returneres via pointer
+
+ *            6 kampe i hver der så tælles sammen med ude og hjemmemaal.
+ *            - Et loop, der kun tæller op for hver 6 struct.
+ *            - Det kører 33 gange for hver runde, med et indre loop, der kører
+ *              igennem de 6 kampe.
+ *              - Så en if, der returnerer rundetal-looped og det antal mål,
+ *                der er blevet optalt i løbet af kamplooped.
+ *
+ *
+ * Opg 3: Funktion, der returnerer de hold, som vinder flere kampe på udebane end på hjemmebane.
+ *
+ *
+ * Opg 4: Funktion, der finder det hold, som i 2015 har haft færrest tilskuere ved hjemmebanekampe.
+            * Denne skal returnere hjemmeholdnavnet samt tilskuerantal til kaldstedet
+            *  OBS: Via parametre, - Lav et array før, der sendes med og fyldes og så returneres via pointer
+
+            - Køres ligesom opgave 3.
+                Bruger structen igen med strcompare == 0;
+                så OPLYSNINGER[].hjemmetilskuere = OPLYSNINGER[].hjemmetilskuere + INFORMATION[].tilskuertal;
+                Løb igennem hele arrayet.
+
+
+ * Opg 5: Funktion der finder kampe mellem klokkeslaet på bestemt ugedag.
+ *  OBS: Via parametre, - Lav et array før, der sendes med og fyldes og så returneres via pointer
+
+          * k1, k2 og u som input parametre.
+          * Skal medtage kampe, der starter på præcis de tidspunter.
+          * k1 + k2 angives som tekststrenge på formen "hh:mm" altså "15:00"
+          * u angives på forkortet form som i tekstfilen Fre, Lor, Son, Ons
+          * Når funktionen ikke kaldes ved input, skal denne have faste variabler sat til "13:15" og "14:15" om søndagen.
+
+ * Opg 6: Funktion der viser samlet tabel over stillingen i turneringen efter sidste runde.
+          * Holdene skal være ordnet efter placering.
+          * Desuden udskrives 'søjler med point,' +
+              * Antal spillede kampe
+              * Antal vundne kampe
+              * Antal tabte kampe
+              * Antal uafgjorte kampe
+              * Samt målforskel
+ */
